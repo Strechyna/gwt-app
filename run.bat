@@ -1,0 +1,1 @@
+del src\main\docker\gwt-app-0.0.1-SNAPSHOT.jar && mvn clean install && copy target\gwt-app-0.0.1-SNAPSHOT.jar src\main\docker && cd src\main\docker && docker-compose down &&  docker-compose up --build

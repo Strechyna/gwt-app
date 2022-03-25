@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="1" author="vstrecyna">
+        <comment>Create table cities</comment>
+        <createTable tableName="cities">
+            <column name="name" type="varchar">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="center_location" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="vstrecyna">
+        <comment>Create table places</comment>
+        <createTable tableName="places">
+            <column name="id" type="varchar">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="city_name" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="text">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

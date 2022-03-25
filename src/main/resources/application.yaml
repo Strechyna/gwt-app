@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: validate
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+google:
+  key: AIzaSyDKIz1Gkkm18V0HsgkyfJJMqS1RyBRSRdI
+
+file:
+  temp-dir: "/tmp"
